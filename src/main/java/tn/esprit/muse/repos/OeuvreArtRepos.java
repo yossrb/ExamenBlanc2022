@@ -11,5 +11,5 @@ import java.util.List;
 public interface OeuvreArtRepos extends JpaRepository<OeuvreArt,Long>
          {
 
-             List<OeuvreArt> findByZoneMuseeAndZoneDirection(Long idMusee, Direction direction);
+             List<OeuvreArt> findByZoneMuseeIdMuseeAndZoneDirection(Long idMusee, Direction direction);
          }

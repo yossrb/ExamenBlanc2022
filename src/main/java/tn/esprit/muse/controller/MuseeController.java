@@ -34,12 +34,10 @@ public class MuseeController {
     void affecterPersonnelsAZone(Long idZone, Long idPersonnel){
          museeImp.affecterPersonnelsAZone(idZone,idPersonnel);
     }
-    @GetMapping("/afficherlestitres/{idMusee}")
-    List<String> titreTableauParMuseeEtDirection(@PathVariable Long idMusee, Direction direction) {
+    @GetMapping("/afficherlestitres/{idMusee}/{direction}")
+    List<String> titreTableauParMuseeEtDirection(@PathVariable Long idMusee, @PathVariable Direction direction) {
         return museeImp.titreTableauParMuseeEtDirection(idMusee,direction);
     }
-    void desaffecterDirecteursZoneInactif() {
-        
-    }
+
 
 }

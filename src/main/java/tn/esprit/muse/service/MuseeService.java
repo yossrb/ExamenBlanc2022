@@ -57,7 +57,7 @@ public class MuseeService implements MuseeImp {
     @Override
     public List<String> titreTableauParMuseeEtDirection(Long idMusee, Direction direction) {
         List<String> titreTableau = new ArrayList<>();
-        for (OeuvreArt oeuvreArt : oeuvreArtRepos.findByZoneMuseeAndZoneDirection(idMusee, direction)) {
+        for (OeuvreArt oeuvreArt : oeuvreArtRepos.findByZoneMuseeIdMuseeAndZoneDirection(idMusee, direction)) {
             titreTableau.add(oeuvreArt.getTitreTableau());
         }
 
