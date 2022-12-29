@@ -2,10 +2,7 @@ package tn.esprit.muse.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.muse.entities.Direction;
-import tn.esprit.muse.entities.Musee;
-import tn.esprit.muse.entities.OeuvreArt;
-import tn.esprit.muse.entities.Zone;
+import tn.esprit.muse.entities.*;
 import tn.esprit.muse.service.MuseeImp;
 
 import java.util.List;
@@ -20,6 +17,10 @@ public class MuseeController {
     @PostMapping("/ajoutmusee")
     Musee ajouterMusee(@RequestBody Musee musee){
         return museeImp.ajouterMusee(musee);
+    }
+    @PostMapping("/ajoutpersoo")
+    Personnel ajouterPersonnel(@RequestBody Personnel personnel){
+        return museeImp.ajouterPersonnel(personnel);
     }
         @PostMapping("/ajoutzone/{idMusee}")
         public Zone ajouterZoneEtAffecterAMusee (@RequestBody Zone zone, @PathVariable Long idMusee){

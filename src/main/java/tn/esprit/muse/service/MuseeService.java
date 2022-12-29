@@ -24,6 +24,10 @@ public class MuseeService implements MuseeImp {
     public Musee ajouterMusee(Musee musee) {
         return museeRepos.save(musee);
     }
+    @Override
+    public Personnel ajouterPersonnel(Personnel personnel) {
+        return personnelRepos.save(personnel);
+    }
 
     @Override
     public Zone ajouterZoneEtAffecterAMusee(Zone zone, Long idMusee) {

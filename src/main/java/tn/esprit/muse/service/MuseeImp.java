@@ -1,14 +1,12 @@
 package tn.esprit.muse.service;
 
-import tn.esprit.muse.entities.Direction;
-import tn.esprit.muse.entities.Musee;
-import tn.esprit.muse.entities.OeuvreArt;
-import tn.esprit.muse.entities.Zone;
+import tn.esprit.muse.entities.*;
 
 import java.util.List;
 
 public interface MuseeImp {
     Musee ajouterMusee(Musee musee);
+    Personnel ajouterPersonnel(Personnel personnel);
     public Zone ajouterZoneEtAffecterAMusee (Zone zone, Long idMusee);
     OeuvreArt ajouterOeuvreArtEtAffecterAZone(OeuvreArt oeuvreArt, Long
             idZone);
